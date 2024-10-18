@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  shard1-db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: shard1
+    ports:
+      - "3307:3306"
+    networks:
+      - app-network
+
+  shard2-db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: shard2
+    ports:
+      - "3308:3306"
+    networks:
+      - app-network
+
+  shard3-db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: shard3
+    ports:
+      - "3309:3306"
+    networks:
+      - app-network
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+  app:
+    build:
+      context: .
+    ports:
+      - "4000:4000"
+    environment:
+      SHARD1_DB_HOST: shard1-db
+      SHARD1_DB_PORT: 3306
+      SHARD2_DB_HOST: shard2-db
+      SHARD2_DB_PORT: 3306
+      SHARD3_DB_HOST: shard3-db
+      SHARD3_DB_PORT: 3306
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+      - shard1-db
+      - shard2-db
+      - shard3-db
+      - redis
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
