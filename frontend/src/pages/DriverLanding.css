@@ -1,0 +1,58 @@
+.driver-landing .content {
+    padding-top: 50px; /* Add some space below the navbar */
+  }
+  
+  .bookings-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .booking-card-large {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px; /* Larger font size */
+  }
+  
+  .booking-info {
+    font-size: 20px; /* Larger text for booking details */
+    margin-bottom: 20px;
+  }
+  
+  .booking-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .icon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .icon.accept {
+    color: white;
+    background-color: #28a745; /* Green background for accept */
+    border: none;
+    font-size: 20px; /* Button font size */
+  }
+  
+  .icon.reject {
+    color: white;
+    background-color: #dc3545; /* Red background for reject */
+    border: none;
+    font-size: 20px; /* Button font size */
+  }
+  
+  .icon.accept:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .icon.reject:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  

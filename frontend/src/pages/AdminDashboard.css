@@ -1,0 +1,34 @@
+.admin-dashboard {
+    display: flex;
+  }
+  
+  .dashboard-content {
+    width: 100%;
+    padding: 20px;
+    padding-top: 50px;
+    padding-left: 80px;
+  }
+  
+  .top-half {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .left-chart {
+    width: 30%; /* 40% width for the pie chart */
+  }
+  
+  .right-chart {
+    width: 60%; /* 60% width for the line chart */
+  }
+  
+  .bottom-half {
+    display: flex;
+    justify-content: center; /* Center the chart horizontally */
+  }
+  
+  .driver-chart {
+    width: 80%; /* 80% width for the driver bar chart */
+  }
+  

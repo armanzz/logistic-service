@@ -1,0 +1,107 @@
+/* src/pages/BookingPage.css */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.loading-gif {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.booking-container {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top */
+  padding: 50px 20px; /* Reduced padding for better fit */
+  background-color: #f4f4f4; /* Lighter background for contrast */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Booking box adjustments */
+.booking-box {
+  background-color: #ffffff;
+  padding: 30px; /* Reduced padding for compactness */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Space between form and map */
+  text-align: center;
+  width: 38%; /* Adjust width for balance */
+}
+
+.booking-input, .booking-select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px; /* Consistent font size */
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.booking-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  font-size: 16px; /* Consistent font size */
+}
+
+.booking-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02); /* Slightly enlarges button on hover */
+}
+
+.map-container {
+  width: 58%; /* Adjusted width for better balance */
+  max-width: 100%;
+  height: 400px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center;
+  }
+
+  .booking-box, .map-container {
+    width: 100%; /* Full width for smaller screens */
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 20px; /* Space between elements */
+  }
+}

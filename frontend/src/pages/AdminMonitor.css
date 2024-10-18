@@ -1,0 +1,101 @@
+.admin-monitor {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5; /* Neutral background */
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .monitor-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 80px;
+    justify-content: flex-start;
+    background-color: #ffffff;
+  }
+  
+  .tables-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .table-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .vehicle-table {
+    width: 30%; /* Make the vehicle table 30% width */
+  }
+  
+  .booking-table {
+    width: 70%; /* Make the booking table 70% width */
+  }
+  
+  .table-section:hover {
+    transform: scale(1.02);
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #ff914d; /* Orange for table headers */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table td {
+    background-color: #f1f1f1; /* Light grey background for rows */
+  }
+  
+  .vehicle-icon-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .vehicle-icon-cell svg {
+    margin-right: 10px;
+    color: #ff914d; /* Orange icon color */
+    font-size: 1.5em;
+  }
+  
+  h1 {
+    color: #2c3e50; /* Darker shade for main heading */
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #2c3e50; /* Consistent heading color */
+    margin-bottom: 15px;
+  }
+  
+  .table tr:hover {
+    background-color: #e2e6ea;
+    transition: background-color 0.3s ease;
+  }
+  
